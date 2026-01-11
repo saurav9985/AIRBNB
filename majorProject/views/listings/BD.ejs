@@ -1,0 +1,26 @@
+<% layout("layouts/boilerplate") %>
+
+<body>
+  <div class="BD_cont">
+     <% for(let data of datas){ %>
+ <div class="BD_data">
+     <p>
+        <b>
+         Name:<%=data.name.toUpperCase()%>
+        </b>
+        <br>
+       Email: <%= data.email%>
+        <br>
+        Phone Number: <%= data.number%>
+        <br>
+        No. of Guests:<%= data.guest%>
+        <br>
+        Check-in Date: <%= new Date(data.checkin).toLocaleString('en-IN',{
+            dateStyle:"long",
+            //timeStyle:'short'
+        })%>
+     </p>
+ </div>
+ <%   } %>
+  </div>
+</body>

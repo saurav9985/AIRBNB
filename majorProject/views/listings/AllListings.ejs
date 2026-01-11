@@ -1,0 +1,32 @@
+<% layout("/layouts/boilerplate") %>
+<style>
+    a{
+        color:black;
+        text-decoration: none;
+    }
+    a:hover{
+        color:rgb(20, 19, 19);
+    }
+</style>
+<body>
+   <% for(let listing of userdata){ %>
+       <a href="/listings/<%= listing._id%>">
+         <div style="border: 1px solid #ccc; padding: 10px; margin: 10px; background-color: #FFFFFF;">
+            <h2><%= listing.title %></h2>
+            <img src="<%= listing.image.url %>" alt="Listing Image" style="width:200px;height:150px;">
+            <p><%= listing.description %></p>
+            <p>Price: $<%= listing.price %> two nights</p>
+            <p>Location: <%= listing.location %>, <%= listing.country %></p>
+        </div>
+       </a>
+    <%}%>
+<hr>
+<p>
+    <h3>Total no of hotels listed here are: <%=userdata.length%></h3>
+</p>
+    <footer>
+    <!-- <p style="text-align: center;">&copy; 2024 Airbnb Clone. All rights reserved.</p> -->
+    
+    </footer>
+
+</body>

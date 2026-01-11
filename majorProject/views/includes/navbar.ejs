@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WanderLust</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md bg-body-tertiary sticky-top">
+  <div class="container-fluid">
+    <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+     <h1 style="color:crimson;font-size: larger;text-align: left;display:inline"><i class="fa-brands fa-airbnb"></i> Airbnb</h1>
+    &nbsp;<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="/listings">Home</a>
+        <a class="nav-link" href="#">Features</a>
+        <a class="nav-link" href="/Lst/new">Add new Listing</a>
+        <a class="nav-link " aria-disabled="true" href="/book" >Booking</a>
+        
+          <form  action="/search">
+            <div class="row">
+          <div class="input-group mb-2">
+  <input type="text" class="form-control" placeholder="Entre Title" aria-label="Recipient’s username" aria-describedby="button-addon2" name="title" class="search_box">
+  
+  <button class="btn btn-outline-secondary" type="submit" id="button-addon2" class="search">Search</button>
+</div>
+        </div>
+          </form>
+        
+        <a class="nav-link active" href="/allLst" style="position: absolute; right:150px" >Detail</a>
+        <a class="nav-link " aria-disabled="true" href="/BD" style="position: absolute; right:30px" >Booking Data</a>
+      </div>
+    </div>
+  </div>
+</nav>
+</body>
+</html>

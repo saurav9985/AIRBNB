@@ -1,0 +1,68 @@
+
+<% layout("/layouts/boilerplate") %>
+<body>
+    <div height="600px" width="400px" style="border: 1px solid #ccc; padding: 10px; margin: 10px; background-color: #FAFAFA;">
+      <h2>Booking</h2>
+      <form method="post" action="/receiveBooking" novalidate class="needs-validation">
+        <label for="name" class="form-label" >
+            Entre your name:
+            <input type="text" id="name" name="name" class=""  required>
+            <div class="valid-feedback">
+      
+    </div>
+    <div class="invalid-feedback">
+        Please choose a name.
+      </div>
+        </label>
+        <br><br>
+        <label for="email">
+            Entre your email:
+            <input type="email" id="email" name="email"  required>
+            <div class="valid-feedback">
+      
+    </div>
+    <div class="invalid-feedback">
+        Please choose a valid email adress.
+      </div>
+        </label>
+        <br><br>
+        <label for="num">
+            Entre your phone number:
+            <input type="tel" id="num" name="number"  required>
+            <div class="valid-feedback">
+      
+    </div>
+    <div class="invalid-feedback">
+        Please choose a valid phone number.
+      </div>
+        </label>
+        <br><br>
+        <label for="guests">
+            number of guests:
+            <select id="" name="guest" required>
+                <option value="1" >1</option>
+                <option value="2" >2</option>
+            </select>
+            <div class="valid-feedback">
+      
+    </div>
+    <div class="invalid-feedback">
+        Please choose no of guests.
+      </div>
+        </label>
+        <br><br>
+        <label for="checkin" >
+            Check-in date:
+            <input type="date" name="checkin" id="checkin" required>
+            <div class="valid-feedback">
+      
+    </div>
+    <div class="invalid-feedback">
+        Please choose a checkin date.
+      </div>
+        </label>
+        <br><br>
+    <button class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+</body>

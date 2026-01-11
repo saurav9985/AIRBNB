@@ -1,0 +1,54 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <div class="row">
+        <div class="col-8 offset-2">
+    <h3>Listing Detail:</h3>
+    </div>
+    <div class="card col-6 offset-2 show-card">  
+  <img src="<%=foundListing.image.url%>" class="card-img-top show-img" alt="Listing_Image">
+  <div class="card-body">
+     <p class="card-text">
+        <b><%= foundListing.title %></b> <br>
+        <%= foundListing.description %> <br>
+        <%= foundListing.price.toLocaleString("en-IN") %> per night <br>
+        <%= foundListing.location %> <br>
+        <%= foundListing.country %> <br
+
+     </p>
+    
+    </div>
+    </div>
+    
+    <br/>
+   <div class="btns">
+  <a href="/listings/<%=foundListing._id%>/edit" class="btn btn-dark col-1 offset-2">
+                Edit
+            </a>
+    <br> 
+     <form method="post" action="/listings/<%=foundListing._id%>?_method=DELETE" style="display:inline;">
+                <button type="submit" style="background-color:red;color:white;" class="btn offset-4" id="del">Delete</button>
+        </form>
+        </div>
+        </div>
+        <!-- <script src="../js/alert.js"></script> -->
+        
+
+     <!-- <div style="border: 1px solid #ccc; padding: 10px; margin: 10px; background-color: #FAFAFA;">
+            <h2><%= foundListing.title %></h2>
+            <img src="<%= foundListing.image.url %>" alt="Listing Image" style="width:200px;height:150px;border-radius: 10px;">
+            <p><%= foundListing.description %></p>
+            <p>Price: &#8377;<%= foundListing.price.toLocaleString("en-IN") %> two nights</p>
+            <p>Location: <%= foundListing.location %>, <%= foundListing.country %></p>
+            <a href="/listings/<%=foundListing._id%>/edit">
+                <button>Edit Listing</button>
+            </a>
+            <form method="post" action="/listings/<%=foundListing._id%>?_method=DELETE" style="display:inline;">
+                <button type="submit" style="background-color:red;color:white;">Delete Listing</button>
+        </div>
+    </form>
+        <a href="/listings"> <button>Home</button></a>
+        <br>
+        <form method="get" action="/allLst">
+            <button>All Listings</button>
+        </form> -->
+</body>

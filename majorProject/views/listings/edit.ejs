@@ -1,0 +1,66 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+  <div class="row">
+     <div class="col-md-8 offset-2 mt-3">
+     <h2>Edit Data</h2>
+     <form method="post" action="/listings/<%=foundListing._id%>?_method=PUT" novalidate class="needs-validation">
+       
+        <div class="cm" >
+        <label for="title" class="form-label">Title:</label><br>
+        <input type="text" id="title" name="listing[title]" value="<%=foundListing.title%>" class="form-control" required>
+        <div class="valid-feedback">
+      
+    </div>
+    <div class="invalid-feedback">
+        Please choose a title.
+      </div><br><br>
+</div>
+        <div class="cm">
+        <label for="description" class="form-label">Description:</label><br>
+        <textarea id="description" class="form-control" name="listing[description]" value="" required minlength="10"><%=foundListing.description%></textarea>
+        <div class="valid-feedback">
+      
+    </div>
+    <div class="invalid-feedback">
+        Please choose a Description.
+      </div><br><br>
+</div>
+       <div class="row cm">
+         <div class="cm col-md-4">
+        <label for="price" class="form-label">Price:</label><br>
+        <input type="number" id="price" class="form-control" name="listing[price]" value="<%=foundListing.price%>" min="0" required>
+        <div class="valid-feedback">
+      
+    </div>
+    <div class="invalid-feedback">
+        Price should be valid.
+      </div><br><br>
+</div>
+        <div class="cm col-md-8">
+        <label for="location" class="form-label">Location:</label><br>
+        <input type="text" id="location" class="form-control" name="listing[location]" value="<%=foundListing.location%>" required>
+        <div class="valid-feedback">
+      
+    </div>
+    <div class="invalid-feedback">
+        Please choose a Valid Location.
+      </div>
+      <br><br>
+</div>
+       </div>
+        <div class="cm">
+        <label for="imageUrl" class="form-label">Image URL:</label><br>
+        <input type="text" id="imageUrl" name="listing[imageUrl]" class="form-control" value="<%=foundListing.image.url%>" required>
+        <div class="valid-feedback">
+      
+    </div>
+    <div class="invalid-feedback">
+        Please provide a image link.
+      </div><br><br>
+</div>
+         <button class="btn btn-dark edit-btn mt-3">Edit Listing</button>
+<br><br>
+    </form>
+   </div>
+  </div>
+</body>

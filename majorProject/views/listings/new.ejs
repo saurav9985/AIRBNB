@@ -1,0 +1,73 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    
+    <div class="col-8 offset-2">
+        <br><br>
+        <h2>Create a New Listing</h2>
+    <form method="post" action="/listings" novalidate class="needs-validation">
+       
+        <div class="row">
+       <div class="mb-3">
+         <label for="title" class="form-label">Title:</label><br>
+        <input type="text" id="title" name="listing[title]" class="form-control" required>
+        <div class="valid-feedback">
+      
+    </div>
+    <div class="invalid-feedback">
+        Please choose a title.
+      </div>
+       </div>
+
+       <div class="mb-3">
+         <label for="description" class="form-label">Description:</label><br>
+        <textarea id="description" name="listing[description]" class="form-control" minlength="10" required></textarea>
+        <div class="valid-feedback">
+      Looks good!
+    </div>
+    <div class="invalid-feedback">
+        Please choose a Description.
+      </div>
+       </div>
+
+        <div class="row">
+            <div class="mb-3 col-md-4">
+            <label for="price" class="form-label">Price:</label><br>
+        <input type="number" id="price" name="listing[price]" class="form-control" min="0" required>
+        <div class="valid-feedback">
+    </div>
+    <div class="invalid-feedback">
+        Price should be valid.
+      </div>
+        </div>
+
+        <div class="mb-3 col-md-8">
+            <label for="location" class="form-label">Country:</label><br>
+        <input type="text" id="location" name="listing[location]" class="form-control"  required>
+        <div class="valid-feedback">
+      
+    </div>
+    <div class="invalid-feedback">
+        Please choose a valid location.
+      </div>
+        </div>
+        </div>
+
+
+        <div class="mb-3">
+            <label for="imageUrl" class="form-label">Image URL:</label><br>
+        <input type="text" id="imageUrl" name="listing[imageUrl]" class="form-control" required>
+        <div class="valid-feedback">
+      
+    </div>
+    <div class="invalid-feedback">
+        Please privide a image link.
+      </div>
+        </div>
+<br>
+        </div>
+        <br>
+        <button class="btn btn-dark add-btn mb-4">Add Listing</button>
+
+    </form>
+    </div>
+</body>
